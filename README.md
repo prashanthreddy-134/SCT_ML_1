@@ -24,7 +24,7 @@ Task 1 of the SkillCraft Technology Machine Learning internship.
 Silhouette score at k = 5: [value]
 
 ## How to run
-1. Open `SCT_ML_2.ipynb` in Google Colab.
+1. Open `SCT_ML_1.ipynb` in Google Colab.
 2. Upload `Mall_Customers.csv` to the Files panel.
 3. Run all cells (Runtime → Run all).
 
