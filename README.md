@@ -1,4 +1,4 @@
-# SCT_ML_2 – Customer Segmentation (K-Means Clustering)
+# SCT_ML_1 – Customer Segmentation (K-Means Clustering)
 
 **Task:** Create a K-Means clustering algorithm to group customers of a retail store based on their purchase history.
 **Dataset:** Mall Customer Dataset (link in the internship brief).
