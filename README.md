@@ -1,30 +1,34 @@
-# SCT_ML_1 – Customer Segmentation (K-Means Clustering)
+# SCT_ML_1: Customer Segmentation (K-Means Clustering)
 
-**Task:** Create a K-Means clustering algorithm to group customers of a retail store based on their purchase history.
-**Dataset:** Mall Customer Dataset (link in the internship brief).
+Task 2 of the SkillCraft Technology Machine Learning internship.
 
-## Setup
-```bash
-pip install -r requirements.txt
-```
-Place the file at `data/Mall_Customers.csv`.
+**Goal:** group mall customers into segments that a business could target differently.
 
-## Run
-```bash
-python kmeans_customers.py                  # chooses k with the best silhouette score
-python kmeans_customers.py --k 5            # or set k yourself
-```
+**Dataset:** Mall Customer Dataset (`Mall_Customers.csv`, 200 customers). The features used are Annual Income (k$) and Spending Score (1-100). The dataset has no purchase history, so the spending score is used as the closest proxy for buying behaviour.
 
 ## Method
-1. Use Annual Income and Spending Score as the customer features (the spending score is the closest proxy for purchase behaviour in this dataset).
-2. Standardise the features with `StandardScaler`.
-3. Choose the number of clusters with the elbow method and silhouette score (k = 2 to 10).
-4. Fit `KMeans` and summarise each segment.
-
-## Outputs (`outputs/`)
-- `kmeans_analysis.png`: elbow curve, silhouette curve and labelled cluster plot
-- `customer_clusters.csv`: every customer with its cluster label
-- `cluster_summary.csv`: average income and spending score per cluster
+1. Standardise income and spending score with `StandardScaler`.
+2. Test k = 1 to 10 with the elbow method (inertia) and k = 2 to 10 with the silhouette score.
+3. Choose k with the highest silhouette score, which gives **k = 5**.
+4. Fit K-Means and summarise each cluster.
 
 ## Results
-Chosen k: ____  Silhouette score: ____
+| Cluster | Avg income (k$) | Avg spending score | Customers | Interpretation |
+|---|---|---|---|---|
+| 0 | 55.30 | 49.52 | 81 | Middle income, middle spending |
+| 1 | 86.54 | 82.13 | 39 | High income, high spending |
+| 2 | 25.73 | 79.36 | 22 | Low income, high spending |
+| 3 | 88.20 | 17.11 | 35 | High income, low spending |
+| 4 | 26.30 | 20.91 | 23 | Low income, low spending |
+
+Silhouette score at k = 5: [value]
+
+## How to run
+1. Open `SCT_ML_2.ipynb` in Google Colab.
+2. Upload `Mall_Customers.csv` to the Files panel.
+3. Run all cells (Runtime → Run all).
+
+## Files
+- `SCT_ML_2.ipynb`: Colab notebook with the full run and outputs
+- `kmeans_customers.py`: the same code as a script
+- `outputs/`: elbow and silhouette plots, cluster labels and summary
