@@ -1,6 +1,6 @@
 # SCT_ML_1: Customer Segmentation (K-Means Clustering)
 
-Task 2 of the SkillCraft Technology Machine Learning internship.
+Task 1 of the SkillCraft Technology Machine Learning internship.
 
 **Goal:** group mall customers into segments that a business could target differently.
 
@@ -29,6 +29,6 @@ Silhouette score at k = 5: [value]
 3. Run all cells (Runtime → Run all).
 
 ## Files
-- `SCT_ML_2.ipynb`: Colab notebook with the full run and outputs
+- `SCT_ML_1.ipynb`: Colab notebook with the full run and outputs
 - `kmeans_customers.py`: the same code as a script
 - `outputs/`: elbow and silhouette plots, cluster labels and summary
